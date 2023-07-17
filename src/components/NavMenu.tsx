@@ -11,7 +11,7 @@ import {
 import {HamburgerIcon} from "@chakra-ui/icons";
 
 const NavMenu = () => {
-  const isDrawer = useBreakpointValue({ base: true, lg: false });
+  const isDrawer = useBreakpointValue({ base: true, md: false });
 
   return (
     <>
