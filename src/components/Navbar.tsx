@@ -9,11 +9,11 @@ const Navbar = () => {
             paddingX={2}
             w="full"
         >
-            <Box flex="1">
+            <Box flex="1" fontWeight={'bold'}>
                 <h1>Aki S.</h1>
             </Box>
             <Spacer/>
-            <Box flex="1" display="flex" justifyContent="center" width="100%">
+            <Box flex="1" display="flex" justifyContent="center">
                 <Image src={logo} alt="Logo" maxHeight="5vh"/>
             </Box>
             <Spacer/>
