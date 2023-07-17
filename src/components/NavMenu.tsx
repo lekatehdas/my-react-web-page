@@ -1,14 +1,8 @@
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  IconButton,
-  useBreakpointValue,
-  HStack,
-  Link
-} from "@chakra-ui/react";
-import {HamburgerIcon} from "@chakra-ui/icons";
+// NavMenu.tsx
+import { Menu, MenuButton, MenuList, IconButton, useBreakpointValue, HStack } from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import ScrollItem from './ScrollItem';
+import ScrollMenuItem from './ScrollMenuItem';
 
 const NavMenu = () => {
   const isDrawer = useBreakpointValue({ base: true, md: false });
@@ -24,16 +18,16 @@ const NavMenu = () => {
             variant='outline'
           />
           <MenuList>
-            <MenuItem as={Link} to="about" smooth={true} offset={-70} duration={500}>About</MenuItem>
-            <MenuItem as={Link} to="projects" smooth={true} offset={-70} duration={500}>Projects</MenuItem>
-            <MenuItem as={Link} to="contact" smooth={true} offset={-70} duration={500}>Contact</MenuItem>
+            <ScrollMenuItem to="about">About</ScrollMenuItem>
+            <ScrollMenuItem to="projects">Projects</ScrollMenuItem>
+            <ScrollMenuItem to="contact">Contact</ScrollMenuItem>
           </MenuList>
         </Menu>
       ) : (
         <HStack spacing={5}>
-          <Link to="about" smooth={true} offset={-70} duration={500}>About</Link>
-          <Link to="projects" smooth={true} offset={-70} duration={500}>Projects</Link>
-          <Link to="contact" smooth={true} offset={-70} duration={500}>Contact</Link>
+          <ScrollItem to="about">About</ScrollItem>
+          <ScrollItem to="projects">Projects</ScrollItem>
+          <ScrollItem to="contact">Contact</ScrollItem>
         </HStack>
       )}
     </>

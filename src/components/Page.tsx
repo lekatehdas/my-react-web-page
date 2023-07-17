@@ -1,5 +1,6 @@
 import {ReactNode} from "react";
 import {Box} from "@chakra-ui/react";
+import {Element} from 'react-scroll';
 
 interface Props {
     id: string
@@ -10,7 +11,9 @@ interface Props {
 const Page = ({id, children, bg}: Props) => {
     return (
         <Box h="95vh" id={id} w="full" bg={bg}>
-            {children}
+            <Element name={id}>
+                {children}
+            </Element>
         </Box>
     )
 };
