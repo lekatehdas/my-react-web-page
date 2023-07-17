@@ -1,8 +1,13 @@
 import './App.css'
+import AboutPage from "./components/AboutPage.tsx";
 
 function App() {
 
-  return <h1>Beginning</h1>
+    return (
+        <>
+            <AboutPage/>
+        </>
+    )
 }
 
 export default App
