@@ -1,4 +1,3 @@
-// NavMenu.tsx
 import { Menu, MenuButton, MenuList, IconButton, useBreakpointValue, HStack } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ScrollItem from './ScrollItem';
@@ -11,17 +10,21 @@ const NavMenu = () => {
     <>
       {isDrawer ? (
         <Menu>
-          <MenuButton
-            as={IconButton}
-            aria-label='Options'
-            icon={<HamburgerIcon />}
-            variant='outline'
-          />
-          <MenuList>
-            <ScrollMenuItem to="about">About</ScrollMenuItem>
-            <ScrollMenuItem to="projects">Projects</ScrollMenuItem>
-            <ScrollMenuItem to="contact">Contact</ScrollMenuItem>
-          </MenuList>
+          {(props) => (
+            <>
+              <MenuButton
+                as={IconButton}
+                aria-label='Options'
+                icon={<HamburgerIcon />}
+                variant='outline'
+              />
+              <MenuList bg='secondary.500'>
+                <ScrollMenuItem to="about" onClick={props.onClose}>About</ScrollMenuItem>
+                <ScrollMenuItem to="projects" onClick={props.onClose}>Projects</ScrollMenuItem>
+                <ScrollMenuItem to="contact" onClick={props.onClose}>Contact</ScrollMenuItem>
+              </MenuList>
+            </>
+          )}
         </Menu>
       ) : (
         <HStack spacing={5}>

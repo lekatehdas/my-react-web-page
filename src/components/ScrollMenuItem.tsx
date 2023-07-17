@@ -1,15 +1,16 @@
-import React, {ReactNode} from "react";
-import { MenuItem } from "@chakra-ui/react";
+// ScrollMenuItem.tsx
+import { MenuItem, MenuItemProps } from '@chakra-ui/react';
 import ScrollItem from './ScrollItem';
+import React, { ReactNode } from 'react';
 
-interface ScrollMenuItemProps {
+interface ScrollMenuItemProps extends MenuItemProps {
   to: string;
   children: ReactNode;
 }
 
 const ScrollMenuItem: React.FC<ScrollMenuItemProps> = ({ to, children, ...props }) => {
   return (
-    <MenuItem {...props}>
+    <MenuItem color="white" bg="secondary.500" _hover={{ bg: "secondary.600" }} {...props}>
       <ScrollItem to={to}>{children}</ScrollItem>
     </MenuItem>
   );

@@ -5,12 +5,11 @@ import {Element} from 'react-scroll';
 interface Props {
     id: string
     children: ReactNode
-    bg: string
 }
 
-const Page = ({id, children, bg}: Props) => {
+const Page = ({id, children}: Props) => {
     return (
-        <Box h="95vh" id={id} w="full" bg={bg}>
+        <Box h="95vh" id={id} w="full">
             <Element name={id}>
                 {children}
             </Element>

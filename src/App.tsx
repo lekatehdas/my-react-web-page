@@ -8,20 +8,20 @@ import Footer from "./components/Footer.tsx";
 import Page from "./components/Page.tsx";
 
 function App() {
-    return <VStack spacing={1}>
-      <Box h="5vh" position={'sticky'} top={'0'} zIndex={'sticky'} bg='orange.300' w={'full'}>
+    return <VStack spacing={1} bgColor={'main.900'}>
+      <Box h="5vh" position={'sticky'} top={'0'} zIndex={'sticky'} w={'full'} >
         <Navbar/>
       </Box>
-      <Page bg='pink.300' id="about">
+      <Page id="about">
         <About/>
       </Page>
-      <Page bg='blue.300' id="projects">
+      <Page id="projects">
         <Projects/>
       </Page>
-      <Page bg='red.300' id="contact">
+      <Page id="contact">
         <Contact/>
       </Page>
-      <Box h="50px" bg='gray.300' w={'full'}>
+      <Box h="50px" w={'full'}>
         <Footer/>
       </Box>
     </VStack>

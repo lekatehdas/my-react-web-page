@@ -8,6 +8,7 @@ const Navbar = () => {
             alignContent={'center'}
             paddingX={2}
             w="full"
+            bgColor={'secondary.500'}
         >
             <Box flex="1" fontWeight={'bold'}>
                 <h1>Aki S.</h1>
