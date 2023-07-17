@@ -1,42 +1,31 @@
 import './App.css'
 import Navbar from "./components/Navbar.tsx";
-import {Grid, GridItem} from "@chakra-ui/react";
+import {Box, VStack} from "@chakra-ui/react";
 import About from "./pages/About.tsx";
 import Projects from "./pages/Projects.tsx";
 import Contact from "./pages/Contact.tsx";
 import Footer from "./components/Footer.tsx";
+import Page from "./components/Page.tsx";
 
 function App() {
 
-    return <Grid
-        templateAreas={{
-            base: `"nav"
-                  "about"
-                  "projects"
-                  "contact"
-                  "footer"`
-        }}
-        gridTemplateRows={'50px 90vh 90vh 90vh 50px'}
-        gap='1'
-        color='blackAlpha.700'
-        fontWeight='bold'
-    >
-        <GridItem pl='2' bg='orange.300' area={'nav'}>
-            <Navbar/>
-        </GridItem>
-        <GridItem pl='2' bg='pink.300' area={'about'}>
-            <About/>
-        </GridItem>
-        <GridItem pl='2' bg='blue.300' area={'projects'}>
-            <Projects/>
-        </GridItem>
-        <GridItem pl='2' bg='red.300' area={'contact'}>
-            <Contact/>
-        </GridItem>
-        <GridItem pl='2' bg='gray.300' area={'footer'}>
-            <Footer/>
-        </GridItem>
-    </Grid>
+    return <VStack spacing={1}>
+      <Box h="5vh" position={'sticky'} top={'0'} zIndex={'sticky'} bg='orange.300' w={'full'}>
+        <Navbar/>
+      </Box>
+      <Page bg='pink.300' id="about">
+        <About/>
+      </Page>
+      <Page bg='blue.300' id="projects">
+        <Projects/>
+      </Page>
+      <Page bg='red.300' id="contact">
+        <Contact/>
+      </Page>
+      <Box h="50px" bg='gray.300' w={'full'}>
+        <Footer/>
+      </Box>
+    </VStack>
 }
 
 export default App
