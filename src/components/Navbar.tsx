@@ -6,16 +6,15 @@ const Navbar = () => {
     return (
         <HStack
             alignContent={'center'}
-            paddingX={2}
             w="full"
-            bgColor={'secondary.500'}
+            bgColor={'main'}
         >
             <Box flex="1" fontWeight={'bold'}>
                 <h1>Aki S.</h1>
             </Box>
             <Spacer/>
             <Box flex="1" display="flex" justifyContent="center">
-                <Image src={logo} alt="Logo" maxHeight="5vh"/>
+                <Image src={logo} alt="Logo" maxHeight="5vh" borderRadius={'50%'}/>
             </Box>
             <Spacer/>
             <Box flex="1" display="flex" justifyContent="end" width="100%">

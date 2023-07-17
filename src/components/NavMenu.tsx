@@ -18,7 +18,7 @@ const NavMenu = () => {
                 icon={<HamburgerIcon />}
                 variant='outline'
               />
-              <MenuList bg='secondary.500'>
+              <MenuList bg='secondary'>
                 <ScrollMenuItem to="about" onClick={props.onClose}>About</ScrollMenuItem>
                 <ScrollMenuItem to="projects" onClick={props.onClose}>Projects</ScrollMenuItem>
                 <ScrollMenuItem to="contact" onClick={props.onClose}>Contact</ScrollMenuItem>
