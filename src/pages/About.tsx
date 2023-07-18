@@ -1,6 +1,8 @@
 import {Box, Button, Text, Image, Stack, Grid, GridItem} from '@chakra-ui/react';
 import pic_me from '../assets/me.jpg';
+import cv from '../assets/Aki_S_CV.pdf'
 import TechCarousel from "../components/TechCarousel.tsx";
+import {Link} from "react-scroll";
 
 const About = () => {
     const techs = [
@@ -65,12 +67,16 @@ const About = () => {
 
             <GridItem gridArea='buttonBox'>
                 <Stack direction={['column', 'row']} spacing={2} paddingTop={3}>
-                    <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']} borderRadius={"3xl"}>
-                        Download CV
-                    </Button>
-                    <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']} borderRadius={"3xl"}>
-                        Hire Me
-                    </Button>
+                    <a href={cv} download>
+                        <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']} borderRadius={"3xl"}>
+                            Download CV
+                        </Button>
+                    </a>
+                    <Link to='contact' smooth={true} duration={500} offset={-45}>
+                        <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']} borderRadius={"3xl"}>
+                            Hire Me
+                        </Button>
+                    </Link>
                 </Stack>
             </GridItem>
 
