@@ -8,13 +8,20 @@ const Navbar = () => {
             alignContent={'center'}
             w="full"
             bgColor={'main'}
+            marginTop={1}
         >
             <Box flex="1" fontWeight={'bold'}>
-                <h1>Aki S.</h1>
+                <h1 color={'secondary'}>Aki S.</h1>
             </Box>
             <Spacer/>
             <Box flex="1" display="flex" justifyContent="center">
-                <Image src={logo} alt="Logo" maxHeight="5vh" borderRadius={'50%'}/>
+                <Image
+                    src={logo}
+                    alt="Logo"
+                    maxHeight="5vh"
+                    borderRadius={'50%'}
+                    filter={'invert(60%) sepia(13%) saturate(694%) hue-rotate(152deg) brightness(85%) contrast(82%)'}
+                />
             </Box>
             <Spacer/>
             <Box flex="1" display="flex" justifyContent="end" width="100%">

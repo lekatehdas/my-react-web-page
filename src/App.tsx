@@ -8,7 +8,7 @@ import Footer from "./components/Footer.tsx";
 import Page from "./components/Page.tsx";
 
 function App() {
-    return <VStack spacing={1} bgColor={'main.900'}>
+    return <VStack spacing={1}>
       <Box h="5vh" position={'sticky'} top={'0'} zIndex={'sticky'} w={'full'} >
         <Navbar/>
       </Box>

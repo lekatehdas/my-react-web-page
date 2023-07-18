@@ -9,24 +9,23 @@ const About = () => {
         alt="About Image"
         objectFit='cover'
         flex='2'
-        borderRadius='lg'
+        borderRadius='xl'
         shadow='md'
-        backgroundColor='secondary.500'
       />
       <Box
         flex='2'
-        p={5}
+        pt={5}
       >
         <Text
           fontSize={['2xl', '3xl', '4xl']}
-          textAlign='center'
+          textAlign='left'
           mb={2}
         >
           My name is <Text as='span' fontWeight='bold' color='secondary'>Aki</Text>
         </Text>
         <Text
-          fontSize={['lg', 'xl', '2xl']}
-          textAlign='center'
+          fontSize={['sm', 'md', 'lg']}
+          textAlign='left'
           mb={5}
         >
           I'm a computer science graduate with a passion for coding.
