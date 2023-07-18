@@ -37,7 +37,8 @@ const About = () => {
                 <Text
                     fontSize={['2xl', '3xl', '4xl']}
                     textAlign='left'
-                    paddingY={3}
+                    paddingTop={3}
+                    noOfLines={2}
                 >
                     My name is <Text as='span' fontWeight='bold' color='secondary'>Aki</Text>
                 </Text>
@@ -46,11 +47,12 @@ const About = () => {
                     fontSize={['sm', 'md', 'lg']}
                     textAlign='left'
                     paddingY={3}
+                    noOfLines={[2, 3]}
                 >
-                    I'm a computer science graduate with a passion for coding.
+                    I'm a computer science graduate with a passion for coding and problem solving.
                 </Text>
 
-                <Stack direction={['column', 'row']} spacing={4} paddingY={5}>
+                <Stack direction={['column', 'row']} spacing={2} paddingTop={10}>
                     <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']} borderRadius={"3xl"}>
                         Download CV
                     </Button>
