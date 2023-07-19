@@ -9,7 +9,7 @@ import Page from "./components/Page.tsx";
 
 function App() {
     return <VStack spacing={1}>
-      <Box h="5vh" position={'sticky'} top={'0'} zIndex={'sticky'} w={'full'} >
+      <Box h="45px" position={'sticky'} top={'0'} zIndex={'sticky'} w={'full'} >
         <Navbar/>
       </Box>
       <Page id="about">
@@ -21,7 +21,7 @@ function App() {
       <Page id="contact">
         <Contact/>
       </Page>
-      <Box h="50px" w={'full'}>
+      <Box h="45px" w={'full'}>
         <Footer/>
       </Box>
     </VStack>
