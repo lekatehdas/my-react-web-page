@@ -3,14 +3,10 @@ import TechCarousel from "../components/TechCarousel.tsx";
 import {Link} from "react-scroll";
 import cv from '../assets/Aki_S_CV.pdf'
 import pic_me from '../assets/me_no_background_cropped.png';
+import {Techs} from "../Techs.ts";
 
 const About = () => {
-    const techs = [
-        "React", "Angular", "JavaScript", "Typescript",
-        "HTML", "CSS", "Node.js", "Express.js", "Python",
-        "Django", "Java", "Kotlin", "MySQL", "MongoDB",
-        "Firebase", "Hadoop", "Spark", "ML", "Git"
-    ];
+    const techs = Object.values(Techs)
 
     return (
         <Grid
@@ -23,6 +19,8 @@ const About = () => {
             gridTemplateRows={"1fr min-content min-content min-content"}
             gridTemplateColumns={'100%'}
             h='calc(100vh - 45px)'
+            gap={1}
+            py={1}
         >
 
             <GridItem gridArea='picture' display="flex" justifyContent="center" alignItems="center" overflow="hidden">
