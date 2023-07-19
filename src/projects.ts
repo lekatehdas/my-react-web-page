@@ -1,14 +1,16 @@
-import { Project } from './components/ProjectCard';
+import {Project} from './components/ProjectCard';
 import hackathon from './assets/hackathon.png'
 import oldWebPage from './assets/oldWebPage.png'
 import randomness from './assets/random_generator.png'
+import {Techs} from "./Techs.ts";
+
 export const projects: Project[] = [
   {
     title: 'Node.js REST APi',
     explanation: 'Backend for coding puzzles',
     image: hackathon,
     github: 'https://github.com/your-username/project-1',
-    techs: ['Node Js', 'Express.js', 'TypeScript', 'MongoDB'],
+    techs: [Techs.NodeJS, Techs.ExpressJS, Techs.TypeScript, Techs.MongoDB],
   },
   {
     title: 'Old Portfolio Page',
@@ -16,14 +18,14 @@ export const projects: Project[] = [
     image: oldWebPage,
     github: 'https://github.com/your-username/project-1',
     page: 'https://www.project-1-demo.com',
-    techs: ['Angular', 'TypeScript', "Firebase", 'HTML', 'CSS'],
+    techs: [Techs.Angular, Techs.TypeScript, Techs.Firebase, Techs.HTML, Techs.CSS],
   },
   {
     title: 'Pseudorandom Generator',
     explanation: 'Android application for gathering sensor data',
     image: randomness,
     github: 'https://github.com/your-username/project-1',
-    techs: ['Kotlin', 'Android studio', 'Firebase'],
+    techs: [Techs.Kotlin, Techs.Android, Techs.Firebase],
   },
   {
     title: 'Games Finder',
@@ -31,7 +33,7 @@ export const projects: Project[] = [
     image: '/path/to/project-1-image.jpg',
     github: 'https://github.com/your-username/project-1',
     page: 'https://www.project-1-demo.com',
-    techs: ['React', 'TypeScript', 'ChakraUi'],
+    techs: [Techs.React, Techs.TypeScript],
   },
   {
     title: 'Design Patterns',
@@ -39,6 +41,6 @@ export const projects: Project[] = [
     image: '/path/to/project-1-image.jpg',
     github: 'https://github.com/your-username/project-1',
     page: 'https://www.project-1-demo.com',
-    techs: ['Java'],
+    techs: [Techs.Java],
   },
 ];

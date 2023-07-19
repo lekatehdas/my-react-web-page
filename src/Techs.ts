@@ -17,5 +17,6 @@ export enum Techs {
     Hadoop = "Hadoop",
     Spark = "Spark",
     ML = "ML",
-    Git = "Git"
+    Git = "Git",
+    Android = "Android"
 }
