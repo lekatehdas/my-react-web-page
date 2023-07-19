@@ -9,7 +9,7 @@ interface Props {
 
 const Page = ({id, children}: Props) => {
     return (
-        <Box h="95vh" id={id} w="full">
+        <Box h='calc(100vh - 45px)' id={id} w="full">
             <Element name={id}>
                 {children}
             </Element>
