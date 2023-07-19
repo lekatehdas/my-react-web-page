@@ -1,8 +1,8 @@
 import {Box, Button, Text, Image, Stack, Grid, GridItem} from '@chakra-ui/react';
-import pic_me from '../assets/me.jpg';
-import cv from '../assets/Aki_S_CV.pdf'
 import TechCarousel from "../components/TechCarousel.tsx";
 import {Link} from "react-scroll";
+import cv from '../assets/Aki_S_CV.pdf'
+import pic_me from '../assets/me_no_background_cropped.png';
 
 const About = () => {
     const techs = [
@@ -23,20 +23,18 @@ const About = () => {
             gridTemplateRows={"1fr min-content min-content min-content"}
             gridTemplateColumns={'100%'}
             h='calc(100vh - 45px)'
-            gap={3}
-            paddingY={3}
         >
 
-            <GridItem gridArea='picture'>
-                <Image
-                    src={pic_me}
-                    alt="About Image"
-                    objectFit='cover'
-                    borderRadius='xl'
-                    shadow='md'
-                    h="100%"
-                    boxSize="full"
-                />
+            <GridItem gridArea='picture' display="flex" justifyContent="center" alignItems="center" overflow="hidden">
+                <Box h="auto" w="auto">
+                    <Image
+                        src={pic_me}
+                        alt="About Image"
+                        borderRadius='xl'
+                        shadow='md'
+                        boxSize="100%"
+                    />
+                </Box>
             </GridItem>
 
 
