@@ -11,7 +11,7 @@ const ScrollItem: React.FC<ScrollItemProps> = ({to, children}) => (
     to={to}
     spy={true}
     smooth={true}
-    offset={-40}
+    offset={-45}
     duration={500}
   >
     {children}
