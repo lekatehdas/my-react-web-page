@@ -16,7 +16,7 @@ const ProjectsCarousel = ({projects, onSelect}: Props) => {
             tabIndex={0}
             marginX={1}
         >
-            <AspectRatio ratio={2/1}>
+            <AspectRatio ratio={2}>
                 <Image
                     src={project.image}
                     alt={project.title}
