@@ -12,11 +12,9 @@ const About = () => {
         <Grid
             templateAreas={{
                 base: `"picture"
-                "techCarousel"
-                "textArea"
-                "buttonBox"`
+                "card"`
             }}
-            gridTemplateRows={"1fr min-content min-content min-content"}
+            gridTemplateRows={"1fr min-content"}
             gridTemplateColumns={'100%'}
             h='calc(100vh - 45px)'
             gap={1}
@@ -29,51 +27,49 @@ const About = () => {
                         src={pic_me}
                         alt="About Image"
                         borderRadius='xl'
-                        shadow='md'
+                        // shadow='md'
                         boxSize="100%"
                     />
                 </Box>
             </GridItem>
 
 
-            <GridItem gridArea='techCarousel'>
-                <TechCarousel techs={techs}/>
-            </GridItem>
+            <GridItem gridArea='card'>
+                <Box bg="white" boxShadow="lg" p={6} rounded="md">
+                    <TechCarousel techs={techs}/>
 
-            <GridItem gridArea='textArea'>
-                <Box>
-                    <Text
-                        fontSize={['2xl', '3xl', '4xl']}
-                        textAlign='left'
-                        noOfLines={2}
-                    >
-                        My name is <Text as='span' fontWeight='bold' color='secondary'>Aki Sirkiä</Text>
-                    </Text>
+                    <Box mt={4}>
+                        <Text
+                            fontSize={['2xl', '3xl', '4xl']}
+                            textAlign='left'
+                            noOfLines={2}
+                        >
+                            My name is <Text as='span' fontWeight='bold' color='secondary'>Aki Sirkiä</Text>
+                        </Text>
 
-                    <Text
-                        fontSize={['sm', 'md', 'lg']}
-                        textAlign='left'
-                        paddingY={3}
-                        noOfLines={3}
-                    >
-                        I'm a computer science graduate with a passion for coding and problem solving.
-                    </Text>
+                        <Text
+                            fontSize={['sm', 'md', 'lg']}
+                            textAlign='left'
+                            paddingY={3}
+                            noOfLines={3}
+                        >
+                            I'm a computer science graduate with a passion for coding and problem solving.
+                        </Text>
+                    </Box>
+
+                    <Stack direction={['column', 'row']} spacing={2} paddingTop={3}>
+                        <a href={cv} download>
+                            <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']} borderRadius={"3xl"}>
+                                Download CV
+                            </Button>
+                        </a>
+                        <Link to='contact' smooth={true} duration={500} offset={-45}>
+                            <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']} borderRadius={"3xl"}>
+                                Hire Me
+                            </Button>
+                        </Link>
+                    </Stack>
                 </Box>
-            </GridItem>
-
-            <GridItem gridArea='buttonBox'>
-                <Stack direction={['column', 'row']} spacing={2} paddingTop={3}>
-                    <a href={cv} download>
-                        <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']} borderRadius={"3xl"}>
-                            Download CV
-                        </Button>
-                    </a>
-                    <Link to='contact' smooth={true} duration={500} offset={-45}>
-                        <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']} borderRadius={"3xl"}>
-                            Hire Me
-                        </Button>
-                    </Link>
-                </Stack>
             </GridItem>
 
         </Grid>

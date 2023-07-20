@@ -2,7 +2,7 @@ import {projects} from "../data/projects.ts";
 import ProjectsCarousel from "../components/ProjectsCarousel.tsx";
 import 'react-alice-carousel/lib/alice-carousel.css';
 import {useState} from "react";
-import {Grid, GridItem} from "@chakra-ui/react";
+import {Grid, GridItem, Text} from "@chakra-ui/react";
 import ProjectCard from "../components/ProjectCard.tsx";
 
 const Projects = () => {
@@ -20,8 +20,8 @@ const Projects = () => {
         gridTemplateColumns={'100%'}
         h='calc(100vh - 45px)'
     >
-        <GridItem gridArea={'text'}>
-            <h1>Here are some of my projects</h1>
+        <GridItem gridArea={'text'} textAlign={'center'}>
+            <Text fontSize={'xl'}>Take a look at some of my projects!</Text>
         </GridItem>
 
         <GridItem gridArea={'carousel'}>

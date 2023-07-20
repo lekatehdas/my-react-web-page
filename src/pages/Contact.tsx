@@ -41,8 +41,8 @@ const Contact = () => {
             p={10}
         >
             <GridItem>
-                <Text fontSize={'xl'}>Lets work together!</Text>
-                <Text fontSize={'sm'}>Send me a message.</Text>
+                <Text fontSize={'xl'} textAlign={'center'}>Lets work together!</Text>
+                <Text fontSize={'sm'} textAlign={'center'}>Send me a message.</Text>
             </GridItem>
 
             <GridItem>
