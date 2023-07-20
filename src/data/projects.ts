@@ -1,9 +1,9 @@
-import {Project} from './components/ProjectCard';
-import hackathon from './assets/hackathon.png'
-import oldWebPage from './assets/oldWebPage.png'
-import randomness from './assets/random_generator.png'
-import game from './assets/game_search.png'
-import patterns from './assets/design_patterns.png'
+import {Project} from '../components/ProjectCard.tsx';
+import hackathon from '../assets/hackathon.png'
+import oldWebPage from '../assets/oldWebPage.png'
+import randomness from '../assets/random_generator.png'
+import game from '../assets/game_search.png'
+import patterns from '../assets/design_patterns.png'
 import {Techs} from "./Techs.ts";
 
 export const projects: Project[] = [

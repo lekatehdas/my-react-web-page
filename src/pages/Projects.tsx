@@ -1,4 +1,4 @@
-import {projects} from "../projects.ts";
+import {projects} from "../data/projects.ts";
 import ProjectsCarousel from "../components/ProjectsCarousel.tsx";
 import 'react-alice-carousel/lib/alice-carousel.css';
 import {useState} from "react";

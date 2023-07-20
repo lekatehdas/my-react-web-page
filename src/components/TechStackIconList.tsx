@@ -1,4 +1,4 @@
-import {Techs} from "../Techs.ts";
+import {Techs} from "../data/Techs.ts";
 import {IconType} from "react-icons";
 import {
     SiAnaconda, SiAndroidstudio,

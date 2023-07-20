@@ -1,5 +1,5 @@
 import {Box, Text, Image, Button, Flex, VStack, HStack} from '@chakra-ui/react';
-import {Techs} from "../Techs.ts";
+import {Techs} from "../data/Techs.ts";
 import TechStackIconList from "./TechStackIconList.tsx";
 
 export interface Project {

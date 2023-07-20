@@ -3,7 +3,7 @@ import TechCarousel from "../components/TechCarousel.tsx";
 import {Link} from "react-scroll";
 import cv from '../assets/Aki_S_CV.pdf'
 import pic_me from '../assets/me_no_background_cropped.png';
-import {Techs} from "../Techs.ts";
+import {Techs} from "../data/Techs.ts";
 
 const About = () => {
     const techs = Object.values(Techs)
