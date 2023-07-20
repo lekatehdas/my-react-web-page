@@ -18,7 +18,7 @@ function App() {
       <Page id="projects">
         <Projects/>
       </Page>
-      <Page id="contact">
+      <Page id="contact" height={'90vh'}>
         <Contact/>
       </Page>
       <Box h="45px" w={'full'}>
