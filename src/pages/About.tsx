@@ -1,4 +1,4 @@
-import {Box, Button, Text, Image, Stack, Grid, GridItem, SimpleGrid, Card} from '@chakra-ui/react';
+import {Box, Button, Text, Image, Stack, SimpleGrid, Card} from '@chakra-ui/react';
 import TechCarousel from "../components/TechCarousel.tsx";
 import {Link} from "react-scroll";
 import cv from '../assets/Aki_S_CV.pdf'
@@ -27,43 +27,49 @@ const About = () => {
                 </Box>
             </Box>
 
-            <Box pt={{ base: '0', md: '16vh' }}>
+            <Box pt={{base: '0', md: '16vh'}}>
                 <Card bg="white" boxShadow="lg" p={6} rounded="md" h={'min-content'}>
-                    {/*<TechCarousel techs={techs}/>*/}
 
-                    <Box mt={4}>
-                        <Text
-                            fontSize={['2xl', '3xl', '4xl']}
-                            textAlign='left'
-                            noOfLines={2}
-                        >
-                            My name is <Text as='span' fontWeight='bold' color='secondary'>Aki Sirkiä</Text>
-                        </Text>
+                    <Text
+                        fontSize={['2xl', '3xl', '4xl']}
+                        textAlign='left'
+                        noOfLines={2}
+                    >
+                        My name is <Text as='span' fontWeight='bold' color='secondary'>Aki Sirkiä</Text>
+                    </Text>
 
-                        <Text
-                            fontSize={['sm', 'md', 'lg']}
-                            textAlign='left'
-                            paddingY={3}
-                            noOfLines={3}
-                        >
-                            I'm a computer science graduate with a passion for coding and problem solving.
-                        </Text>
-                    </Box>
+
+                    <Text
+                        fontSize={['sm', 'md', 'lg']}
+                        textAlign='left'
+                        paddingY={3}
+                        noOfLines={3}
+                    >
+                        I'm a computer science graduate with a passion for coding and problem solving.
+                    </Text>
+
 
                     <Stack direction={['column', 'row']} spacing={2} paddingTop={3}>
+
                         <a href={cv} download>
                             <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']}
                                     borderRadius={"3xl"}>
                                 Download CV
                             </Button>
                         </a>
+
                         <Link to='contact' smooth={true} duration={500} offset={-45}>
                             <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']}
                                     borderRadius={"3xl"}>
                                 Hire Me
                             </Button>
                         </Link>
+
                     </Stack>
+
+                    {/*<Box overflow={'hidden'}>*/}
+                    {/*    <TechCarousel techs={techs}/>*/}
+                    {/*</Box>*/}
                 </Card>
             </Box>
 
