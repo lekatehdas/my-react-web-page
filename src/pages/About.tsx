@@ -47,7 +47,7 @@ const About = () => {
                         textAlign='left'
                         noOfLines={2}
                     >
-                        My name is <Text as='span' fontWeight='bold' color='secondary'>Aki</Text>
+                        My name is <Text as='span' fontWeight='bold' color='secondary'>Aki Sirkiä</Text>
                     </Text>
 
                     <Text
