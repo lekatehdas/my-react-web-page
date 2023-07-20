@@ -21,7 +21,7 @@ function App() {
       <Page id="contact" height={'90vh'}>
         <Contact/>
       </Page>
-      <Box h="45px" w={'full'}>
+      <Box h="45px" w={'full'} pb={1}>
         <Footer/>
       </Box>
     </VStack>

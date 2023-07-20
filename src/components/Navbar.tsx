@@ -8,6 +8,7 @@ const Navbar = () => {
             alignContent={'center'}
             w="full"
             bgColor={'main'}
+            p={2}
         >
             <Box flex="1" fontWeight={'bold'}>
                 <Text color={'secondary'} fontSize={'md'} whiteSpace={'nowrap'}>Aki Sirkiä</Text>
