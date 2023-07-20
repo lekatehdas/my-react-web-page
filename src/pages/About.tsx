@@ -1,4 +1,4 @@
-import {Box, Button, Text, Image, Stack, Grid, GridItem} from '@chakra-ui/react';
+import {Box, Button, Text, Image, Stack, Grid, GridItem, SimpleGrid, Card} from '@chakra-ui/react';
 import TechCarousel from "../components/TechCarousel.tsx";
 import {Link} from "react-scroll";
 import cv from '../assets/Aki_S_CV.pdf'
@@ -9,34 +9,27 @@ const About = () => {
     const techs = Object.values(Techs)
 
     return (
-        <Grid
-            templateAreas={{
-                base: `"picture"
-                "card"`
-            }}
-            gridTemplateRows={"1fr min-content"}
-            gridTemplateColumns={'100%'}
+        <SimpleGrid
+            columns={{sm: 1, md: 2}}
             h='calc(100vh - 45px)'
             gap={1}
             py={1}
         >
 
-            <GridItem gridArea='picture' display="flex" justifyContent="center" alignItems="center" overflow="hidden">
+            <Box display="flex" justifyContent="center" alignItems="center" overflow="hidden">
                 <Box h="auto" w="auto">
                     <Image
                         src={pic_me}
                         alt="About Image"
                         borderRadius='xl'
-                        // shadow='md'
                         boxSize="100%"
                     />
                 </Box>
-            </GridItem>
+            </Box>
 
-
-            <GridItem gridArea='card'>
-                <Box bg="white" boxShadow="lg" p={6} rounded="md">
-                    <TechCarousel techs={techs}/>
+            <Box pt={{ base: '0', md: '16vh' }}>
+                <Card bg="white" boxShadow="lg" p={6} rounded="md" h={'min-content'}>
+                    {/*<TechCarousel techs={techs}/>*/}
 
                     <Box mt={4}>
                         <Text
@@ -59,20 +52,22 @@ const About = () => {
 
                     <Stack direction={['column', 'row']} spacing={2} paddingTop={3}>
                         <a href={cv} download>
-                            <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']} borderRadius={"3xl"}>
+                            <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']}
+                                    borderRadius={"3xl"}>
                                 Download CV
                             </Button>
                         </a>
                         <Link to='contact' smooth={true} duration={500} offset={-45}>
-                            <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']} borderRadius={"3xl"}>
+                            <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']}
+                                    borderRadius={"3xl"}>
                                 Hire Me
                             </Button>
                         </Link>
                     </Stack>
-                </Box>
-            </GridItem>
+                </Card>
+            </Box>
 
-        </Grid>
+        </SimpleGrid>
     );
 };
 
