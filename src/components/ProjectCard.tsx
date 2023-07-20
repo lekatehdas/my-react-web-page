@@ -1,4 +1,4 @@
-import {Box, Text, Image, Button, Flex, VStack, HStack} from '@chakra-ui/react';
+import {Box, Text, Image, Button, VStack, HStack, SimpleGrid, Card} from '@chakra-ui/react';
 import {Techs} from "../data/Techs.ts";
 import TechStackIconList from "./TechStackIconList.tsx";
 
@@ -17,15 +17,21 @@ interface Props {
 
 const ProjectCard = ({project}: Props) => {
     return (
-        <Box
+        <Card
             padding={4}
-            borderWidth={1}
             borderRadius="lg"
-            boxShadow="lg"
             height="100%"
         >
-            <Flex direction={["column", "row"]} height="100%">
-                <VStack flex="1" pb={3} align={'flex-end'} height="100%">
+            <SimpleGrid
+                columns={{base: 1, sm: 2}}
+                spacing={2}
+                height="100%"
+                templateRows={
+                {base: "1fr min-content",
+                    md: "1fr"}
+            }
+            >
+                <VStack spacing={4}>
                     <Box
                         height="100%"
                         width="100%"
@@ -49,12 +55,10 @@ const ProjectCard = ({project}: Props) => {
                     <TechStackIconList techs={project.techs}/>
                 </VStack>
 
-
                 <VStack
-                    flex="1"
-                    justify="space-between"
+                    justify="center"
                     p={2}
-                    gap={1}
+                    gap={5}
                 >
                     <Box>
                         <Text fontSize="2xl">{project.title}</Text>
@@ -72,8 +76,8 @@ const ProjectCard = ({project}: Props) => {
                         }
                     </HStack>
                 </VStack>
-            </Flex>
-        </Box>
+            </SimpleGrid>
+        </Card>
     );
 }
 
