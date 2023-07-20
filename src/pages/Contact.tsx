@@ -19,6 +19,7 @@ const Contact = () => {
 
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
         const formData = new FormData(e.currentTarget);
 
         const data: FormProps = {
@@ -26,8 +27,12 @@ const Contact = () => {
             email: formData.get('email') as string,
             message: formData.get('message') as string
         }
-        handleSubmit(data)
 
+        const formElement = e.currentTarget
+
+        handleSubmit(data)
+            .then(() => formElement.reset())
+            .catch(err => console.log("Error occurred: " + err))
     };
 
     return (

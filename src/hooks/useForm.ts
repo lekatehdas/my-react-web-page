@@ -14,13 +14,15 @@ const useForm = () => {
     const handleSubmit = ({name, email, message}: FormProps) => {
         const payload = {content: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`}
 
-        apiClient.post('', payload)
-            .then(() => {
+        return apiClient.post('', payload)
+            .then(res => {
                 setSuccess(true);
                 setError(null);
+                return res
             })
             .catch(err => {
                 setError(err.message || "Something went wrong.");
+                throw err
             })
     }
 
