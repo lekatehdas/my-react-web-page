@@ -29,7 +29,7 @@ const TechCarousel = ({techs}: Props) => {
             disableButtonsControls
             disableDotsControls
             items={items}
-            autoPlayInterval={3000}
+            autoPlayInterval={2500}
             responsive={{
                 0: {
                     items: 3,
