@@ -71,7 +71,7 @@ const Contact = () => {
                         </FormControl>
 
                         <Button type="submit" colorScheme="highlight">
-                            Submit
+                            Message Me
                         </Button>
                     </VStack>
                 </Box>
