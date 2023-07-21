@@ -1,17 +1,20 @@
-// ScrollMenuItem.tsx
-import { MenuItem, MenuItemProps } from '@chakra-ui/react';
-import ScrollItem from './ScrollItem';
-import React, { ReactNode } from 'react';
+import { MenuItem } from '@chakra-ui/react';
+import { ReactNode } from 'react';
+import scrollTo from "../services/scrolling.ts";
 
-interface ScrollMenuItemProps extends MenuItemProps {
+interface Props {
   to: string;
   children: ReactNode;
 }
 
-const ScrollMenuItem: React.FC<ScrollMenuItemProps> = ({ to, children, ...props }) => {
+const ScrollMenuItem = ({to, children}: Props) => {
+  const handleClick = () => {
+      scrollTo(to)
+  };
+
   return (
-    <MenuItem color="white" bg="secondary.500" _hover={{ bg: "secondary.600" }} {...props}>
-      <ScrollItem to={to}>{children}</ScrollItem>
+    <MenuItem color="white" bg="secondary.500" _hover={{ bg: "secondary.600" }} onClick={handleClick}>
+      {children}
     </MenuItem>
   );
 };
