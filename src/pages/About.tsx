@@ -50,28 +50,25 @@ const About = () => {
 
 
                     <Stack direction={['column', 'row']} spacing={2} paddingTop={3}>
-
                         <a href={cv} download>
                             <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']}
                                     borderRadius={"3xl"}>
                                 Download CV
                             </Button>
                         </a>
-
                         <Link to='contact' smooth={true} duration={500} offset={-45}>
                             <Button colorScheme='highlight' variant='solid' width={['100%', 'auto']}
                                     borderRadius={"3xl"}>
                                 Hire Me
                             </Button>
                         </Link>
-
                     </Stack>
-
-                    {/*<Box overflow={'hidden'}>*/}
-                    {/*    <TechCarousel techs={techs}/>*/}
-                    {/*</Box>*/}
                 </Card>
             </Box>
+
+            {/*<Box overflow={'hidden'} gridColumn={'1fr'}>*/}
+            {/*    <TechCarousel techs={techs}/>*/}
+            {/*</Box>*/}
 
         </SimpleGrid>
     );
