@@ -13,7 +13,7 @@ const OpenMenu = ({items}: Props) => {
     return (
         <HStack spacing={5}>
             {items.map(item =>
-            <Box cursor={'pointer'} onClick={() => handleOnClick(item.to)}>
+            <Box key={item.to} cursor={'pointer'} onClick={() => handleOnClick(item.to)}>
                 {item.text}
             </Box>
             )}

@@ -1,6 +1,7 @@
-import {Project} from "./ProjectCard.tsx";
-import AliceCarousel from "react-alice-carousel";
-import {AspectRatio, Box, Image} from "@chakra-ui/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css'
+import { Project } from './ProjectCard';
+import { Box, AspectRatio, Image } from '@chakra-ui/react';
 
 interface Props {
     projects: Project[];
@@ -8,41 +9,27 @@ interface Props {
 }
 
 const ProjectsCarousel = ({projects, onSelect}: Props) => {
-    const items = projects.map((project, index) => (
-        <Box
-            key={index}
-            onClick={() => onSelect(project)}
-            role="button"
-            tabIndex={0}
-            marginX={1}
-        >
-            <AspectRatio ratio={2}>
-                <Image
-                    src={project.image}
-                    alt={project.title}
-                    objectFit="fill"
-                    borderRadius="md"
-                    boxSize="100%"
-                />
-            </AspectRatio>
-        </Box>
-    ));
-
     return (
-        <AliceCarousel
-            disableDotsControls
-            mouseTracking
-            items={items}
-            controlsStrategy="responsive"
-            autoPlay
-            autoPlayInterval={2000}
-            infinite
-            disableButtonsControls
-            responsive={{
-                0: {items: 3},
-                1024: {items: 3},
-            }}
-        />
+        <Swiper
+            spaceBetween={10}
+            slidesPerView={4}
+        >
+            {projects.map((project, index) => (
+                <SwiperSlide key={index}>
+                    <Box onClick={() => onSelect(project)} role="button" tabIndex={0} marginX={1}>
+                        <AspectRatio ratio={2}>
+                            <Image
+                                src={project.image}
+                                alt={project.title}
+                                objectFit="fill"
+                                borderRadius="md"
+                                boxSize="100%"
+                            />
+                        </AspectRatio>
+                    </Box>
+                </SwiperSlide>
+            ))}
+        </Swiper>
     );
 };
 
